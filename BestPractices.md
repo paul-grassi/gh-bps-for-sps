@@ -2,6 +2,10 @@
 
 With the 2017 revision of SP 800-63-3, NIST pursued a document development method based on the open source software development model. This time-tested development model 
 
+# Process Flow
+
+Overall process flow that jives with NIST and USG expected processes, rejiggered for GitHub. If we do this right it could serve as the high-level TOC that drives each section.
+
 # Code Repositories
 
 All document sources need to be tracked by a source control repository. Additionally, any configuration or template files needed to produce the final document should be included as well. If these build artifacts specific to the document set you're working on, it should go in the repository with the document source. If 
@@ -38,7 +42,7 @@ Pull requests should be allowed from external parties and subject to review and 
 
 Allowing universal read access to the repository, and allowing universal submission of issues and pull requests, does not mean that you're allowing universal write access to the document itself. It's best if a small group of core editors has write access to the main branch. 
 
-Pull requests from everybody, including team members, should be subject to review from the appropriate parties before merging. 
+Pull requests from everybody, including team members, should be subject to review from the appropriate parties before merging. *Include instructions on reviews.*
 
 ## Talking Offline
 
@@ -60,15 +64,17 @@ GitHub allows you to set up a template for new issues. This template can be used
 
 Keep in mind that anybody submitting an issue can just delete the template. You might find that the internal team will often do this for expediency, but external contributors will tend to use the template.
 
+*Provide our template since it follows a fairly normalized model for NIST.*
+
 ## Labels and Milestones
 
-All issues should be labeled with their associated document or section, nature, and proposed resolution.
+All issues should be labeled with their associated document or section, nature, and proposed resolution. We can put in the standard labels and then let teams go from there. It sure would be nice to auto-label based on issue content :).
 
 Milestones can be used to collect important issues together and mark document release stages.
 
 ## Referencing Commits
 
-Git commits can reference issues by including the issue number in the commit message. In GitHub, this automatically creates a link within the issue page. 
+Git commits can reference issues by including the issue number in the commit message. In GitHub, this automatically creates a link within the issue page. This SHOULD be 
 
 ## Saying "No"
 
@@ -80,11 +86,17 @@ Not everyone who wants to contribute to a document, especially a government docu
 
 All inputs received in such alternative channels should be broken into discrete issues and submitted by the team itself to the issue tracker. This behavior needs to be clearly displayed to anyone using the alternative channels so that nobody is surprised when their email's content is placed on a public website, with attribution.
 
+Let's provide the excel template and a pointer, if not instructions, on how to use our issue uploader.
+
 ## Exposing Mistakes
 
 It's tempting to hold back on development and realease of the document to the public repository until it's in a "good enough" state, but it's strongly encouraged that people release early explicitly because 
 
 It's better to have a mistake exposed early, so that it can be found and fixed by a member of the public, rather than risking having that mistake make it through to the final document.
+
+## Metrics
+
+TBD, but we have a script to start generating metrics for all issues.
 
 # Branches
 
