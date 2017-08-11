@@ -1,14 +1,16 @@
 # Introduction
 
-With the 2017 revision of SP 800-63-3, NIST pursued a document development method based on the open source software development model. This time-tested development model 
+With the 2017 revision of SP 800-63-3, NIST pursued a document development method based on the open source software development model. This time-tested development model
+
+# Overall Process Flow
 
 # Code Repositories
 
-All document sources need to be tracked by a source control repository. Additionally, any configuration or template files needed to produce the final document should be included as well. If these build artifacts specific to the document set you're working on, it should go in the repository with the document source. If 
+All document sources need to be tracked by a source control repository. Additionally, any configuration or template files needed to produce the final document should be included as well. If these build artifacts specific to the document set you're working on, it should go in the repository with the document source. If
 
 ## Valuing Diffs
 
-The markdown format was chosen partially to allow for human-readable diffs between different versions of a file. 
+The markdown format was chosen partially to allow for human-readable diffs between different versions of a file.
 
 ## What Goes In
 
@@ -26,7 +28,7 @@ Some people might not like what you're creating, or they might not understand th
 
 ## Allow Interaction
 
-It may be tempting to lock down the repository such that only team members can submit issues and pull requests. This style of control is counter to the ethos and value of the open source model, and you should instead endeavor to allow interaction from all interested parties in a variety of ways. 
+It may be tempting to lock down the repository such that only team members can submit issues and pull requests. This style of control is counter to the ethos and value of the open source model, and you should instead endeavor to allow interaction from all interested parties in a variety of ways.
 
 ## Pull Requests
 
@@ -36,9 +38,9 @@ Pull requests should be allowed from external parties and subject to review and 
 
 ## Who Gets Write Access
 
-Allowing universal read access to the repository, and allowing universal submission of issues and pull requests, does not mean that you're allowing universal write access to the document itself. It's best if a small group of core editors has write access to the main branch. 
+Allowing universal read access to the repository, and allowing universal submission of issues and pull requests, does not mean that you're allowing universal write access to the document itself. It's best if a small group of core editors has write access to the main branch.
 
-Pull requests from everybody, including team members, should be subject to review from the appropriate parties before merging. 
+Pull requests from everybody, including team members, should be subject to review from the appropriate parties before merging.
 
 ## Talking Offline
 
@@ -48,7 +50,7 @@ However, wherever possible and as soon as possible, discussion and resolution sh
 
 # Issue Trackers
 
-The Issue Tracker feature of GitHub provides a means for anyone, including external parties and team members, to report problems, suggest changes, and 
+The Issue Tracker feature of GitHub provides a means for anyone, including external parties and team members, to report problems, suggest changes, and
 
 ## Comments
 
@@ -68,11 +70,11 @@ Milestones can be used to collect important issues together and mark document re
 
 ## Referencing Commits
 
-Git commits can reference issues by including the issue number in the commit message. In GitHub, this automatically creates a link within the issue page. 
+Git commits can reference issues by including the issue number in the commit message. In GitHub, this automatically creates a link within the issue page.
 
 ## Saying "No"
 
-While every issue being reported needs to be read and considered, not every issue is going to be *accepted*. 
+While every issue being reported needs to be read and considered, not every issue is going to be *accepted*.
 
 ## Email Inputs
 
@@ -82,15 +84,15 @@ All inputs received in such alternative channels should be broken into discrete 
 
 ## Exposing Mistakes
 
-It's tempting to hold back on development and realease of the document to the public repository until it's in a "good enough" state, but it's strongly encouraged that people release early explicitly because 
+It's tempting to hold back on development and realease of the document to the public repository until it's in a "good enough" state, but it's strongly encouraged that people release early explicitly because
 
 It's better to have a mistake exposed early, so that it can be found and fixed by a member of the public, rather than risking having that mistake make it through to the final document.
 
 # Branches
 
-A *branch* in git is a set of changes with a related history. Every time a new set of edits are being made, they should be put onto their own branch. 
+A *branch* in git is a set of changes with a related history. Every time a new set of edits are being made, they should be put onto their own branch.
 
-While it may seem like overkill to create a new branch for each cohesive action, branches in git are cheap, unlike many other source control systems. 
+While it may seem like overkill to create a new branch for each cohesive action, branches in git are cheap, unlike many other source control systems.
 
 ## Forks
 
@@ -98,23 +100,23 @@ Git repositories can be cloned and forked to multiple users in multiple location
 
 Team members can use the main fork for development work, but all work should be done on branches as noted above.
 
-External entities will use a fork of the repository to make their edits and propose pull requests from. 
+External entities will use a fork of the repository to make their edits and propose pull requests from.
 
 ## Multiple Remotes
 
-When working with a fork, it's important to keep up to date. A good method for this is to have multiple remote repositories: the "upstream" repository that you read from, and the "origin" repository that you write to. 
+When working with a fork, it's important to keep up to date. A good method for this is to have multiple remote repositories: the "upstream" repository that you read from, and the "origin" repository that you write to.
 
 Managing a new branch on your fork for making a change would then follow the process:
 
 1. Update your references: git fetch upstream
-1. Create your branch off of the latest upstream branch: git checkout -b mybranchname upstream/master 
+1. Create your branch off of the latest upstream branch: git checkout -b mybranchname upstream/master
 1. Edit and commit changes to your branch
 1. Push your branch to your fork: git push origin mybranchname
 1. Create a pull request on GitHub from your branch
 
 ## Merging Branches
 
-If you're working on a clean copy of the upstream project for your branch, it should merge seamlessly when the pull request is accepted. 
+If you're working on a clean copy of the upstream project for your branch, it should merge seamlessly when the pull request is accepted.
 
 However, if multiple parties are working in parallel then there can be conflicts. It is up to the editing team who is accepting the pull requests to manage these conflicts during the merge process.
 
@@ -126,12 +128,12 @@ When working on two issues that are meant to be considered as separate pull requ
 
 In git, each commit has a *parent* commit that indicates the state of the document at the point the branch was originally created. Occasionally, there will be a need to change the parent of a branch's root commit. Common reasons include:
 
-1. A new branch was created on top of an existing working branch instead of the upstream. 
+1. A new branch was created on top of an existing working branch instead of the upstream.
 1. A branch is based on an old upstream commit and needs to be placed onto a newer upstream commit.
 
 # Markdown
 
-The markdown language is a simplified textual representation of common document structural elements. 
+The markdown language is a simplified textual representation of common document structural elements.
 
 ## Images
 
@@ -163,7 +165,7 @@ Lists in markdown automatically create numbers, and the source text should use o
 
 ## Line Endings and Special Characters
 
-Even though we're well into the 21st century, source control systems are still sometimes plagued by errors with document line endigns and the use of special characters. 
+Even though we're well into the 21st century, source control systems are still sometimes plagued by errors with document line endigns and the use of special characters.
 
 # Document Production
 
@@ -175,10 +177,10 @@ Because there are multiple output formats, it is important to keep the input as 
 
 ## Special Formatting
 
-NIST's extensions to the base markdown language provide for a number of useful additions that are often featured in NIST documents. 
+NIST's extensions to the base markdown language provide for a number of useful additions that are often featured in NIST documents.
 
 If there are gaps in the current markdown capability, where a very specific formatting is required, then the best long-term solution is to develop an extension to address the format requirements across all different publication formats.
 
 ## Continuous Integration
 
-One of the best features of the document production system is a form of continuous integration. Whenever a change is made and checked in to the repository, the document processing chain detects this and automatically generates the downstream documents in all the various formats as required. 
+One of the best features of the document production system is a form of continuous integration. Whenever a change is made and checked in to the repository, the document processing chain detects this and automatically generates the downstream documents in all the various formats as required.
